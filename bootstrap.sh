@@ -84,4 +84,4 @@ function create_tmp_key() {
 
 update_env
 create_gitconfig
-create_tmp_key
+# create_tmp_key
