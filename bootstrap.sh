@@ -74,14 +74,5 @@ function update_env() {
   git --version
 }
 
-function create_tmp_key() {
-  KEY_PATH=~/.ssh/id_rsa
-  ssh-keygen -t rsa -f $KEY_PATH -N ""
-  eval $(ssh-agent -s)
-  ssh-add $KEY_PATH
-  echo "Copy key from $KEY_PATH.pub to https://github.com/settings/ssh/new"
-}
-
 update_env
 create_gitconfig
-# create_tmp_key
